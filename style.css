@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+    display: flex;  /*makes body a flex container*/
+    justify-content: center;    /*center content horizontally within flex container*/
+    align-items: center;    /*center content vertically within flex container*/
+    height: 100vh;  /*100% of the viewport height(browser window)*/
+    background-color: hsl(0,0%,95%);
+}
+
+
+#calculator{
+    font-family: sans-serif,serif;
+    background-color: hsl(0,0%,15%);
+    border-radius: 15px; /*creates rounded corners on an element by 15 px*/
+    max-width: 500px;
+    overflow: hidden;   /*content exceeding size of box will be hidden*/
+}
+#keys{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 10px;
+    padding: 20px;  /*around all the keys*/
+    
+}
+#display{
+    width:100%;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+    border: none;
+    background-color: hsl(0,0%,20%);
+    color: white;
+    overflow-x: auto;  /* Allow horizontal scrolling */
+    white-space: nowrap;  /* Prevent wrapping of text */
+    box-sizing: border-box;  /* Include padding in the element's total width and height */
+}
+
+button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: hsl(0,0%, 30%); /*hsl stands for hue, saturation, lightness*/
+    color: white;
+    font-size: 3rem;    /*relative to font size of html element, 3x size of html*/
+    font-weight: bold;
+    cursor: pointer; /*changes cursor to a pointer(hand icon) when mouse hovers over element*/
+}
+button:hover{
+    background-color:hsl(0,0%,40%);
+}
+button:active{ /*lighten button when clicked*/
+    background-color:hsl(0,0%,30%);
+}
+.orange-button{
+    background-color: #ff9900;
+}
+.orange-button:hover{
+    background-color: #ffb84d;
+}
+.orange-button:active{
+    background-color: #ffd18c;
+}
